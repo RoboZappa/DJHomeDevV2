@@ -1,0 +1,348 @@
+/*Sizing & Transition*/
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: "Montserrat", cursive;
+}
+
+.jerryContainer{
+    max-width: 67%;
+}
+
+.jerry{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.jerryH1{
+    text-align: left;
+}
+
+button {
+    color: none;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    font-family: 'Bungee', cursive;
+    font-size: 16px;
+    border: none;
+}
+
+header {
+    position: relative;
+    width: 90%;
+    height: auto;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#hideMenu{
+    margin-bottom: -40px;
+    z-index: 1;
+    text-align: center;
+}
+
+#navBar{
+    display: none;
+    z-index: -1;
+}
+
+.imgContent{
+    margin: 10px;
+    margin-bottom: 100px;
+    border: 1px solid whitesmoke;
+    height: 500px;
+}
+
+.title {
+    font-size: 60px;
+    font-family: 'Bungee Shade', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#mic{
+    margin-top: 5px;
+}
+
+.container {
+    background-color: black;
+    max-width: 875px;
+}
+
+.row{
+    text-align: center;
+}
+
+.content {
+    border-bottom: whitesmoke solid 1px;
+    margin: 5rem auto;
+    min-height: 250px;
+}
+
+.duv {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+.contactLogo {
+    font-family: 'Bungee Shade', cursive;
+    width: 200px;
+    top: 5px;
+    left: 5px;
+    font-size: 75px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+    position: fixed;
+    width: 200px;
+    top: 5px;
+    left: 5px;
+    font-size: 75px;
+}
+
+#smallLogo {
+    display: none;
+}
+
+.initial {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 75px;
+}
+
+#bulb {
+    position: fixed;
+    top: 6px;
+    right: 0;
+    width: 2.4rem;
+}
+
+
+/*Contact Form Modal*/
+
+#contact{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#formModal{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -400px;
+    height: 500px; 
+    width: 800px;
+    background-color: black;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+}
+
+#form{
+    width: 50%;
+    float: left;
+    padding-left: 20px;
+}
+
+#contact li{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.social{
+    text-align: center;
+    margin-bottom: -15px;
+    padding-top: 15px;
+}
+
+.social li{
+    font-family: 'Bungee', cursive;
+    display: inline;
+}
+
+/* #email{
+    width: 280px;
+} */
+
+input{
+    background-color: whitesmoke;
+    color: black;
+}
+
+textarea{
+    background-color: whitesmoke;
+    color: black;
+    /* width: 400px;
+    height: 150px; */
+}
+
+
+.logoBox{
+    width: 50%;
+    float: right;
+    /* margin-top: 40px;
+    margin-right: 75px; */
+}
+
+
+
+/*End of Contact Modal*/
+
+
+/*Success/Fail Modals*/
+#success{
+    display: none;
+    position: absolute;
+    top: 5px;
+    background-color: hsl(171, 100%, 41%);
+    z-index: 1;
+}
+
+#success p{
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+#fail{
+    display: none;
+    position: absolute;
+    top: 5px;
+    background-color: hsl(348, 100%, 61%);
+    z-index: 2;
+}
+
+#fail p{
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+/*End Success/Fail Modals*/
+
+
+@media only screen and (max-width: 1310px) {
+    .logo {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 790px) {
+    header {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    #lightSwitch {
+        display: none;
+    }
+
+    #bulb {
+        top: 10px; 
+        right: 10px;
+    }
+
+    .logoBox{
+        display: none;
+    }
+
+    #formModal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        height: 100%; 
+        width: 100%;
+        border: none;
+    }    
+
+    #form{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        padding-left: 20px;
+    }
+
+    /* input{
+        width: 45%;
+        min-width: 288px;
+    } */
+
+    /* #email{
+        width: 60%;
+        min-width: 288px;
+    } */
+
+    /* textarea{
+        width: 80%;
+    } */
+
+    .formButtons{
+        display: inline;
+    }
+}

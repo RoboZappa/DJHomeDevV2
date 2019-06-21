@@ -1,0 +1,250 @@
+/*
+Developer:  Jordan Gilmore/Dave Ross
+Class:      CIS 130 - 102
+Date:       4/27/17
+Project:    Final Project
+Filename:   styles.css*/
+/**CIS 130 Final Project*
+Dave & Jordan 417 Lawn Salon*/
+
+/*reset styles*/
+body, div, nav, header, footer, section, article, a, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*Google Fonts*/
+/*font-family: 'Bitter', serif;*/
+body {
+  font-family: 'Bitter', serif;
+  background-color: rgb(118, 204, 118);
+}
+
+.container {
+  margin: auto;
+  background-color: beige;
+  padding: 1.5em;
+  width: 95%;
+}
+
+/*This header work by: JG*/
+
+.jumbotron {
+  text-align: left;
+  color: white;
+  background-image: url(images/header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  text-shadow: 5px 5px 10px black;
+  text-align: right;
+}
+
+nav {
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid black;
+  /*don't know how I feel about this box-shadow. Thoughts? -JG*/
+  box-shadow: 8px 5px rgba(255, 255, 80, 0.2);
+  background-color: rgba(245, 245, 220, 0.8);
+}
+
+hr {
+  border-top: 1px solid black;
+  margin: 10px 100px 10px 0;
+}
+
+/*Header Get Quote* by Dave Ross*/
+/*header a replaced to h3 a*/
+h3 a {
+  padding: 5px;
+  border: none;
+  background-color: rgba(245, 245, 220, 0.8);
+}
+
+nav li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px 10px 30px;
+}
+
+nav a:hover {
+  /* padding: 10px; */
+  text-decoration: none;
+}
+
+/*End header work*/
+/*Begin body*/
+#myCarousel img {
+  width: 100%;
+}
+
+article img {
+  float: left;
+  margin-left: 4em;
+}
+
+article {
+  float: left;
+  width: 95%;
+  padding: 2.5em 0 2.5em 0;
+  margin: 1.0em;
+  text-align: left;
+  border-bottom: 2px solid black;
+}
+
+.sideSection {
+  float: left;
+  width: 95%;
+  min-height: 16em;
+  padding: 2.5em 1em 0 1em;
+  margin-top: 1.0em;
+  text-align: left;
+  /* border-right: 2px solid black; */
+}
+
+/*To drop the side border on proud section*/
+.proud {
+  float: left;
+  width: 95%;
+  padding: 2.5em 0 2.5em 0;
+  margin: 1.0em;
+  text-align: left;
+  border-right: none;
+}
+
+/*for the garden image on services page*/
+#gardenimg {
+  float: right;
+  box-shadow: 5px 5px 15px #63631c;
+  margin-left: 5em;
+}
+
+/*Footer is not in the div container tag*/
+footer {
+  clear: both;
+  margin: auto;
+  background-color: beige;
+  border-top: 2px solid black;
+  padding: 20px;
+  text-align: center;
+  width: 95%;
+}
+
+footer li {
+  text-decoration: none;
+  text-align: left;
+}
+/* Services html */
+
+.serviceUl {
+  margin-top: 1.5em;
+}
+.serviceLi {
+  font-size: 20px;
+  margin-left: 3.5em;
+}
+
+/*End of Jordan Gilmore's work*/
+
+/*Contact Page Specific
+by Dave Ross*/
+
+header h1 {
+  text-shadow: 5px 5px 10px black;
+}
+
+.contactInfo li p {
+  margin: 5px;
+}
+
+.col-sm-1.control-label {
+  text-align: left;
+}
+
+/*Contact Page Specific
+by Dave Ross*/
+
+.quote {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.quote h4 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.col-sm-1 {
+  text-align: left;
+}
+
+/*Testimonials Page Specific*/
+
+/* _JG */
+.testsUl {
+  margin-top: 1.5em;
+}
+.testsLi {
+  font-size: 16px;
+  margin-left: 2.5em;
+  margin-right: 1.5em;
+}
+
+.tests {
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.row-sm-4 {
+  font-style: italic;
+  padding: 20px;
+}
+
+/*##########################*/
+/*770 px is where the BootStrap Media query begins... supposedly */
+@media screen and (max-width:1000px) {
+  .sideSection {
+    border-right: none;
+    border-bottom: 2px solid black;
+  }
+
+  nav li {
+    width: 50%;
+    padding: 15px;
+  }
+
+  nav a:hover {
+    padding: none;
+  }
+
+  #gardenimg {
+    width: 39%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  #gardenimg {
+    float: none;
+    width: 150px;
+  }
+
+  #myCarousel {
+    display: none;
+  }
+
+  /*Prevents a overlap with the "Get A Quote Now!"*/
+  h3 a {
+    padding: 0px;
+  }
+
+  nav li {
+    text-align: center;
+    width: 100%;
+  }
+
+}
