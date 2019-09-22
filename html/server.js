@@ -1,7 +1,7 @@
 const express = require('express');
 const http = require('http');
-const sendMail = require('./public/js/lib/djemaildev')
-var app = express();
+const sendMail = require('./public/js/djemaildev')
+const app = express();
 
 app.use(express.urlencoded({
     extended: false
@@ -17,7 +17,7 @@ app.post('/email', (req, res) => {
             console.log('ERROR: ', err);
             return res.status(500).json({message: err.message || 'Internal Error'});
         } 
-        log('Email Submitted');
+        console.log('Email Submitted');
         return res.json({ message: 'Email Submitted'});
     });
 })
