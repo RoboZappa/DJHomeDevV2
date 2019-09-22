@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/skeleton.css">
+    <title>DJ WebDev</title>
+    <link rel="stylesheet" type="text/css" href="djstyledev.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/imgs/3levelsInverseIcon.png">
+    
+    <!-- Primary Meta Tags -->
+    <title>DJ Web Dev</title>
+    <meta name="title" content="DJ Web Dev">
+    <meta name="description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://djwebdev.net/">
+    <meta property="og:title" content="DJ Web Dev">
+    <meta property="og:description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta property="og:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://djwebdev.net/">
+    <meta property="twitter:title" content="DJ Web Dev">
+    <meta property="twitter:description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta property="twitter:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png">
+</head>
+
+<body>
+    <div id="container" class="container">
+        <h1 class="logo" id="bigLogo">_DJ<br>WEB<br>DEV</h1>
+        <div class="row">
+            <div class="twelve columns">
+                <header>
+                    <div id="hideMenu">
+                        <button onclick="flyDown()" class="menu" id="menu">MENU</button>
+                    </div>
+                    <div class="row" id="navBar">
+                        <div class="three columns"><a href="#about">Who We Are</a></div>
+                        <div class="three columns"><a href="./coming.html" target="_blank">What We Do</a></div>
+                        <div class="three columns"><a onclick="viewModal()">How to Reach Us</a></div>
+                        <div class="three columns"><a href="./coming.html" target="_blank">Where We've Been</a></div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="row content">
+            <div class="twelve columns">
+                <h1 class="title">Mic Drop</h1>
+                <p>DJ WebDev promises to deliver a web experience that is three things: Magical, Intuitive
+                    and Cohesive. We will ensure your website will not only get straight to the point, but
+                    will also instill a sense of wonder.
+                </p>
+            </div>
+        </div>
+        <div class="row content">
+            <h1 class="title" id="about">DJ WebDev Is...</h1>
+            <div class="twelve columns" style="padding-bottom: 25px;">
+                <div class="six columns">
+                    <h3 class="initial">D</h3>
+                    <h4>Dave Ross, Co-Founder</h4>
+                    <p>Talented. Inventive. Affable.</p>
+                </div>
+                <div class="six columns">
+                    <h3 class="initial">J</h3>
+                    <h4>Jordan Gilmore, Co-Founder</h4>
+                    <p>Sharp Dressed. Punctual. Also Affable.</p>
+                </div><!-- End 12 columns  -->
+            </div> <!-- End row  -->
+        </div> <!-- End Container  -->
+        <div class="duv">
+            <button onclick="lightSwitch()">
+                <span>
+                    <h5 id="lightSwitch">Lights Off</h5>
+                    <img id="bulb" src="assets/icons/lightbulbOff.png" alt="Light Bulb">
+                </span>
+            </button>
+        </div>
+        <!-- <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+            title="Creative Commons BY 3.0" target="_blank">CC
+            3.0 BY</a> -->
+        <div class="u-full-width" id="success">
+            <p>Success! Your Message Has Been Received!</p>
+        </div>
+        <div class="u-full-width" id="fail">
+            <p>Oh No! Your Messaged Failed to Send. Please Try Again.</p>
+        </div>
+    </div>
+    <div id="contact">
+        <div id="formModal">
+            <div class="social">
+                <ul>
+                    <li><a href="http://www.facebook.com/officialdjwebdev" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/officialdjwebdev" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div id="form">
+                    <form>
+                        <label for="name">Name:</label>
+                        <input class="u-full-width" type="text" id="name" placeholder="Bob Sacamano">
+                        <label for="email">Email:</label>
+                        <input class="u-full-width" type="text" id="email" placeholder="bob@gmail.com">
+                        <label for="message">Message:</label>
+                        <textarea class="u-full-width" placeholder="Message..." id="message"></textarea>
+                        <div class="formButtons">
+                            <button type="submit" value="Submit">SUBMIT</button>
+                            <button id="close" onclick="viewModal()">CLOSE</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="logoBox">
+                    <h1 class="contactLogo" id="bigLogo">_DJ<br>WEB<br>DEV</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/djscriptdev.js"></script>
+
+</html>
