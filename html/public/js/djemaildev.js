@@ -14,7 +14,7 @@ const sendMail = (email, name, message) => {
             Body: {
                 Html: {
                     Charset: 'UTF-8',
-                    Data: message,
+                    Data: 'Email: ' + email + ' Message: ' + message,
                 },
                 Text: {
                     Charset: 'UTF-8',
@@ -23,10 +23,10 @@ const sendMail = (email, name, message) => {
             },
             Subject: {
                 Charset: 'UTF-8',
-                Data: name
+                Data: 'DJHelloDev: ' + name
             }
         },
-        Source: email
+        Source: 'info@djwebdev.net'
     };
 
     var sendPromise = new AWS.SES({ apiVersion: '2010-12-01' }).sendEmail(params).promise();

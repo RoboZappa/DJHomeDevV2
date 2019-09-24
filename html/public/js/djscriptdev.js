@@ -82,7 +82,6 @@ $('form').on('submit', e => {
         name,
         message
     }
-    console.log('Data', data)
 
     $.post('./email', data, function() {
         console.log('Server received our data');
