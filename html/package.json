@@ -1,0 +1,26 @@
+{
+  "name": "djhomedev",
+  "version": "1.0.0",
+  "description": "Home of DJWebDev",
+  "main": "server.js",
+  "dependencies": {
+    "aws-sdk": "^2.533.0",
+    "express": "^4.17.1",
+    "expressjs": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoboZappa/DJHomeDevV2.git"
+  },
+  "author": "DJWebDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoboZappa/DJHomeDevV2/issues"
+  },
+  "homepage": "https://github.com/RoboZappa/DJHomeDevV2#readme"
+}
