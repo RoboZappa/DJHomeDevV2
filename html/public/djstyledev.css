@@ -198,6 +198,10 @@ header {
     padding-left: 20px;
 }
 
+#form textarea{
+    height: 150px;
+}
+
 #contact li{
     list-style-type: none;
     padding-top: 10px;
