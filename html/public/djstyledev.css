@@ -277,6 +277,17 @@ textarea{
     font-size: 20px;
 }
 
+.close{
+    text-justify: auto;
+    text-align: center;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.closeMessage
+
 /*End Success/Fail Modals*/
 
 
