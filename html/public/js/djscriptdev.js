@@ -11,6 +11,7 @@ var bulb = document.getElementById('bulb');
 var contact = document.getElementById('contact');
 var form = document.getElementById('form');
 var viewForm = false;
+var success = document.getElementById('success');
 
 function lightSwitch() {
     if (toggle == false) {
@@ -61,13 +62,22 @@ function flyDown() {
 }
 
 function viewModal(){
-    if(viewForm == false){
+    if(getComputedStyle(contact).display == "none"){
         contact.style.display = "block";
-        viewForm = true;
     }else{
         contact.style.display = "none";
-        viewForm = false;
     }
+}
+
+function submitForm(){
+    contact.style.display = "none";
+    success.style.display = "block";
+    setTimeout(function() {closeOut('success'); }, 2500);
+}
+
+function closeOut(element){
+    var e = document.getElementById(element);
+    e.style.display = "none";
 }
 
 $('form').on('submit', e => {

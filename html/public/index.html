@@ -86,11 +86,17 @@
             title="Creative Commons BY 3.0" target="_blank">CC
             3.0 BY</a> -->
         <div class="u-full-width" id="success">
-            <p>Success! Your Message Has Been Received!</p>
+            <div class="eleven columns">
+                <p style="padding-left: 80px">Success! Your Message Has Been Received!</p>
+            </div>
+            <p class="one column close" onclick="closeOut('success')">X</p>
         </div>
         <div class="u-full-width" id="fail">
-            <p>Oh No! Your Messaged Failed to Send. Please Try Again.</p>
-        </div>
+                <div class="eleven columns">
+                    <p style="padding-left: 80px">Oh No! Your Message Failed to Send. Please Try Again.</p>
+                </div>
+                <p class="one column close" onclick="closeOut('fail')">X</p>
+            </div>
     </div>
     <div id="contact">
         <div id="formModal">
@@ -110,7 +116,7 @@
                         <label for="message">Message:</label>
                         <textarea class="u-full-width" placeholder="Message..." id="message"></textarea>
                         <div class="formButtons">
-                            <button type="submit" value="Submit">SUBMIT</button>
+                            <button type="submit" value="Submit" onclick="submitForm()">SUBMIT</button>
                             <button id="close" onclick="viewModal()">CLOSE</button>
                         </div>
                     </form>
