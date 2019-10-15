@@ -246,7 +246,7 @@ textarea{
 
 /*Success/Fail Modals*/
 #success{
-    display: block;
+    display: none;
     position: absolute;
     top: 5px;
     background-color: hsl(171, 100%, 41%);
@@ -262,7 +262,7 @@ textarea{
 }
 
 #fail{
-    display: block;
+    display: none;
     position: absolute;
     top: 5px;
     background-color: hsl(348, 100%, 61%);
