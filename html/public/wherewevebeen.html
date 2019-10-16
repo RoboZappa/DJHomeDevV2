@@ -11,24 +11,27 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee|Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/imgs/3levelsInverseIcon.png">
-    
+
     <!-- Primary Meta Tags -->
     <title>DJ Web Dev</title>
     <meta name="title" content="DJ Web Dev">
-    <meta name="description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta name="description"
+        content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://djwebdev.net/">
     <meta property="og:title" content="DJ Web Dev">
-    <meta property="og:description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta property="og:description"
+        content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
     <meta property="og:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://djwebdev.net/">
     <meta property="twitter:title" content="DJ Web Dev">
-    <meta property="twitter:description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta property="twitter:description"
+        content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
     <meta property="twitter:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png">
 </head>
 
@@ -52,28 +55,21 @@
         </div>
         <div class="row content">
             <div class="twelve columns">
-                <h1 class="title">Mic Drop</h1>
-                <p>DJ WebDev promises to deliver a web experience that is three things: Magical, Intuitive
-                    and Cohesive. We will ensure your website will not only get straight to the point, but
-                    will also instill a sense of wonder.
-                </p>
+                <h1 class="title">Previous Work</h1>
+                <div class="six columns">
+                    <h2 class="subTitle">Title</h2>
+                    <ul class="leftList">
+                        <li><a href="./417HomeSalon/index.html" target="_blank">417 Lawn Salon - 2017</a></li>
+                    </ul>
+                </div>
+                <div class="five columns">
+                    <h2 class="subTitle">Type</h2>
+                    <ul>
+                        <li><h4>Mock</h4></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="row content">
-            <h1 class="title" id="about">DJ WebDev Is...</h1>
-            <div class="twelve columns" style="padding-bottom: 25px;">
-                <div class="six columns">
-                    <h3 class="initial">D</h3>
-                    <h4>Dave Ross, Co-Founder</h4>
-                    <p>Talented. Inventive. Affable.</p>
-                </div>
-                <div class="six columns">
-                    <h3 class="initial">J</h3>
-                    <h4>Jordan Gilmore, Co-Founder</h4>
-                    <p>Technical. Punctual. Also Affable.</p>
-                </div><!-- End 12 columns  -->
-            </div> <!-- End row  -->
-        </div> <!-- End Container  -->
         <div class="duv">
             <button onclick="lightSwitch()">
                 <span>
@@ -86,17 +82,11 @@
             title="Creative Commons BY 3.0" target="_blank">CC
             3.0 BY</a> -->
         <div class="u-full-width" id="success">
-            <div class="eleven columns">
-                <p style="padding-left: 80px">Success! Your Message Has Been Received!</p>
-            </div>
-            <p class="one column close" onclick="closeOut('success')">X</p>
+            <p>Success! Your Message Has Been Received!</p>
         </div>
         <div class="u-full-width" id="fail">
-                <div class="eleven columns">
-                    <p style="padding-left: 80px">Oh No! Your Message Failed to Send. Please Try Again.</p>
-                </div>
-                <p class="one column close" onclick="closeOut('fail')">X</p>
-            </div>
+            <p>Oh No! Your Messaged Failed to Send. Please Try Again.</p>
+        </div>
     </div>
     <div id="contact">
         <div id="formModal">
@@ -116,7 +106,7 @@
                         <label for="message">Message:</label>
                         <textarea class="u-full-width" placeholder="Message..." id="message"></textarea>
                         <div class="formButtons">
-                            <button type="submit" value="Submit" onclick="submitForm(email)">SUBMIT</button>
+                            <button type="submit" value="Submit">SUBMIT</button>
                             <button id="close" onclick="viewModal()">CLOSE</button>
                         </div>
                     </form>
