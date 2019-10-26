@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Title Meta Tag -->
+    <title>DJ Web Dev</title>
+	
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/skeleton.css">
-    <title>DJ WebDev</title>
     <link rel="stylesheet" type="text/css" href="djstyledev.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee|Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/imgs/3levelsInverseIcon.png">
     
     <!-- Primary Meta Tags -->
-    <title>DJ Web Dev</title>
     <meta name="title" content="DJ Web Dev">
     <meta name="description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
 
@@ -30,11 +30,11 @@
     <meta property="twitter:title" content="DJ Web Dev">
     <meta property="twitter:description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
     <meta property="twitter:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png">
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="container" class="container">
-        <h1 class="logo" id="bigLogo">_DJ<br>WEB<br>DEV</h1>
+        <h1 class="logo" id="bigLogo1">_DJ<br>WEB<br>DEV</h1>
         <div class="row">
             <div class="twelve columns">
                 <header>
@@ -45,7 +45,7 @@
                         <div class="three columns"><a href="#about">Who We Are</a></div>
                         <div class="three columns"><a href="./coming.html" target="_blank">What We Do</a></div>
                         <div class="three columns"><a onclick="viewModal()">How to Reach Us</a></div>
-                        <div class="three columns"><a href="../417HomeSalon/index.html" target="_blank">Where We've Been</a></div>
+                        <div class="three columns"><a href="../417HomeSalon/index.html" target="_blank">Where We've Been</a></div><!-- this link is broken... don't know what you want done about it though....-->
                     </div>
                 </header>
             </div>
@@ -58,7 +58,7 @@
                     will also instill a sense of wonder.
                 </p>
             </div>
-        </div>
+        </div>		
         <div class="row content">
             <h1 class="title" id="about">DJ WebDev Is...</h1>
             <div class="twelve columns" style="padding-bottom: 25px;">
@@ -74,10 +74,9 @@
                 </div><!-- End 12 columns  -->
             </div> <!-- End row  -->
         </div> <!-- End Container  -->
-        <div class="duv">
-            <button onclick="lightSwitch()">
+		<div class="duv">
+            <button id="lightSwitch" onclick="lightSwitch()">Lights Off
                 <span>
-                    <h5 id="lightSwitch">Lights Off</h5>
                     <img id="bulb" src="assets/icons/lightbulbOff.png" alt="Light Bulb">
                 </span>
             </button>
@@ -122,13 +121,12 @@
                     </form>
                 </div>
                 <div class="logoBox">
-                    <h1 class="contactLogo" id="bigLogo">_DJ<br>WEB<br>DEV</h1>
+                    <h1 class="contactLogo" id="bigLogo2">_DJ<br>WEB<br>DEV</h1>
                 </div>
             </div>
         </div>
     </div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="./js/djscriptdev.js"></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/djscriptdev.js"></script>
+  </body>
 </html>

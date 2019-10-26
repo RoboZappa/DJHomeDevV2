@@ -1,7 +1,5 @@
 /*Sizing & Transition*/
-*,
-*:after,
-*:before {
+*, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -23,21 +21,17 @@ body {
     font-family: "Montserrat", cursive;
 }
 
-.jerryContainer{
+.jerryContainer {
     max-width: 67%;
 }
 
-.jerry{
+.jerry {
     margin: 0 auto;
     width: 100%;
 }
 
-.jerryH1{
+.jerryH1 {
     text-align: left;
-}
-
-button {
-    color: none;
 }
 
 a {
@@ -50,8 +44,7 @@ a:hover {
     cursor: pointer;
 }
 
-h1,
-h3 {
+h1, h3 {
     text-align: center;
 }
 
@@ -80,18 +73,18 @@ header {
     box-sizing: border-box;
 }
 
-#hideMenu{
+#hideMenu {
     margin-bottom: -40px;
     z-index: 1;
     text-align: center;
 }
 
-#navBar{
+#navBar {
     display: none;
     z-index: -1;
 }
 
-.imgContent{
+.imgContent {
     margin: 10px;
     margin-bottom: 100px;
     border: 1px solid whitesmoke;
@@ -105,7 +98,7 @@ header {
     margin-bottom: 30px;
 }
 
-#mic{
+#mic {
     margin-top: 5px;
 }
 
@@ -114,7 +107,7 @@ header {
     max-width: 875px;
 }
 
-.row{
+.row {
     text-align: center;
 }
 
@@ -139,7 +132,7 @@ header {
     margin: 0 auto;
 }
 
-.logo {
+.logo {/**/
     font-family: 'Bungee Shade', cursive;
     text-align: center;
     position: fixed;
@@ -153,9 +146,32 @@ header {
     display: none;
 }
 
-.initial {
+/* .initial {
     font-family: 'Bungee Shade', cursive;
     font-size: 75px;
+} BEC COMMENTED THIS OUT DUE TO NEW FUN EDIT (makes it easier to revert should you not like it)*/
+
+/*Lines 158 - 175 == Bec's Text Animation*/
+.initial {
+	text-align: center;
+	font-family: 'Bungee Shade', cursive;
+    font-size: 75px;
+    animation:name 5s linear 1s infinite reverse;
+    transform:rotateY(0deg);  
+}
+
+@keyframes name {
+    from {
+		transform:rotateY(0deg);
+	}
+    to {
+		transform:rotateY(360deg); 
+	}
+}
+/*End*/
+
+#lightSwitch {
+	font-size: 1.4em;
 }
 
 #bulb {
@@ -168,7 +184,7 @@ header {
 
 /*Contact Form Modal*/
 
-#contact{
+#contact {
     display: none;
     position: fixed;
     width: 100%;
@@ -179,7 +195,7 @@ header {
     z-index: 1;
 }
 
-#formModal{
+#formModal {
     position: fixed;
     top: 25%;
     left: 50%;
@@ -192,39 +208,39 @@ header {
     color: whitesmoke;
 }
 
-#form{
+#form {
     width: 50%;
     float: left;
     padding-left: 20px;
 }
 
-#contact li{
+#contact li {
     list-style-type: none;
     padding-top: 10px;
     padding-left: 10px;
 }
 
-.social{
+.social {
     text-align: center;
     margin-bottom: -15px;
     padding-top: 15px;
 }
 
-.social li{
+.social li {
     font-family: 'Bungee', cursive;
     display: inline;
 }
 
-/* #email{
+/* #email {
     width: 280px;
 } */
 
-input{
+input {
     background-color: whitesmoke;
     color: black;
 }
 
-textarea{
+textarea {
     background-color: whitesmoke;
     color: black;
     /* width: 400px;
@@ -232,7 +248,7 @@ textarea{
 }
 
 
-.logoBox{
+.logoBox {
     width: 50%;
     float: right;
     /* margin-top: 40px;
@@ -245,7 +261,7 @@ textarea{
 
 
 /*Success/Fail Modals*/
-#success{
+#success {
     display: none;
     position: absolute;
     top: 5px;
@@ -253,7 +269,7 @@ textarea{
     z-index: 1;
 }
 
-#success p{
+#success p {
     font-weight: bold;
     text-align: center;
     margin: 10px;
@@ -261,7 +277,7 @@ textarea{
     font-size: 20px;
 }
 
-#fail{
+#fail {
     display: none;
     position: absolute;
     top: 5px;
@@ -269,7 +285,7 @@ textarea{
     z-index: 2;
 }
 
-#fail p{
+#fail p {
     font-weight: bold;
     text-align: center;
     margin: 10px;
@@ -277,16 +293,18 @@ textarea{
     font-size: 20px;
 }
 
-.close{
+.close {
     text-justify: auto;
     text-align: center;
 }
 
-.close:hover{
+.close:hover {
     cursor: pointer;
 }
 
-.closeMessage
+.closeMessage {
+	/*code here*/
+}
 
 /*End Success/Fail Modals*/
 
@@ -297,6 +315,7 @@ textarea{
         margin: 0 auto;
     }
 
+	
     .container {
         width: 95%;
     }
@@ -318,11 +337,11 @@ textarea{
         right: 10px;
     }
 
-    .logoBox{
+    .logoBox {
         display: none;
     }
 
-    #formModal{
+    #formModal {
         position: fixed;
         top: 0;
         left: 0;
@@ -332,28 +351,28 @@ textarea{
         border: none;
     }    
 
-    #form{
+    #form {
         width: 100%;
         margin: 0 auto;
         float: none;
         padding-left: 20px;
     }
 
-    /* input{
+    /* input {
         width: 45%;
         min-width: 288px;
     } */
 
-    /* #email{
+    /* #email {
         width: 60%;
         min-width: 288px;
     } */
 
-    /* textarea{
+    /* textarea {
         width: 80%;
     } */
 
-    .formButtons{
+    .formButtons {
         display: inline;
     }
 }
