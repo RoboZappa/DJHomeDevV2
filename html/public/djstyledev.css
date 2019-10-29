@@ -61,10 +61,6 @@ li {
     font-size: 1em;
 }
 
-li a {
-    font-size: 2em;
-}
-
 h1,
 h3 {
     text-align: center;
@@ -173,24 +169,12 @@ header {
     font-size: 75px;
 }
 
-/* where we've been style start  */
-.subTitle {
-    font-family: 'Bungee Shade', cursive;
-}
-
-.leftList {
-    text-decoration: underline;
-}
-
-/* where we've been style end  */
-
 #bulb {
     position: fixed;
     top: 6px;
     right: 0;
     width: 2.4rem;
 }
-
 
 /*Contact Form Modal*/
 
@@ -241,10 +225,6 @@ header {
     display: inline;
 }
 
-/* #email{
-    width: 280px;
-} */
-
 input{
     background-color: whitesmoke;
     color: black;
@@ -255,7 +235,6 @@ textarea{
     color: black;
     height: 140px;
 }
-
 
 .logoBox{
     width: 50%;
@@ -269,7 +248,6 @@ textarea{
 }
 
 /*End of Contact Modal*/
-
 
 /*Success/Fail Modals*/
 #success{
@@ -314,23 +292,6 @@ textarea{
 }
 
 /*End Success/Fail Modals*/
-@media only screen and (max-width: 1800px) {
-    .container {
-        max-width: 1100px;
-    }
-}
-
-@media only screen and (max-width: 1700px) {
-    .container {
-        max-width: 1000px;
-    }
-}
-
-@media only screen and (max-width: 1600px) {
-    .container {
-        max-width: 900px;
-    }
-}
 
 @media only screen and (max-width: 1310px) {
     .logo {
@@ -341,7 +302,6 @@ textarea{
     .container {
         width: 95%;
     }
-
 }
 
 @media only screen and (max-width: 790px) {

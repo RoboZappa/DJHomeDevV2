@@ -38,6 +38,7 @@ const sendMail = (email, name, message) => {
         }).catch(
             function (err) {
                 console.error(err, err.stack);
+                submitForm();
             });
     // AWS.SES.sendEmail(params, function (err, data) {
     //     if (err) console.log(err, err.stack);
