@@ -12,6 +12,7 @@ var contact = document.getElementById('contact');
 var form = document.getElementById('form');
 var viewForm = false;
 var success = document.getElementById('success');
+var fail = document.getElementById('fail');
 
 function lightSwitch() {
     if (toggle == false) {
@@ -69,11 +70,22 @@ function viewModal(){
     }
 }
 
-function submitForm(){
-    contact.style.display = "none";
-    success.style.display = "block";
-    setTimeout(function() {closeOut('success'); }, 2500);
+function submitForm(email){
+    messageSent = emailIsValid(email.value);
+
+    if(messageSent == true){
+        contact.style.display = "none";
+        success.style.display = "block";
+        setTimeout(function() {closeOut('success'); }, 2500);
+    }else{
+        fail.style.display = "block";
+        setTimeout(function() {closeOut('fail'); }, 2500);
+    }
 }
+
+function emailIsValid (email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 
 function closeOut(element){
     var e = document.getElementById(element);
