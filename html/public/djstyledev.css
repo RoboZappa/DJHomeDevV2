@@ -160,6 +160,11 @@ header {
     font-size: 75px;
 }
 
+a:hover{
+    font-weight: 100;
+    color: whitesmoke;
+}
+
 #smallLogo {
     display: none;
 }
