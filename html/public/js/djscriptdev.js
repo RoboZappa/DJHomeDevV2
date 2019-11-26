@@ -77,6 +77,7 @@ function submitForm(email){
         contact.style.display = "none";
         success.style.display = "block";
         setTimeout(function() {closeOut('success'); }, 2500);
+        document.forms['contactForm'].reset()
     }else{
         fail.style.display = "block";
         setTimeout(function() {closeOut('fail'); }, 2500);
