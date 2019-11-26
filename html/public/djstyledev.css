@@ -227,8 +227,7 @@ input{
 textarea{
     background-color: whitesmoke;
     color: black;
-    /* width: 400px;
-    height: 150px; */
+    height: 140px;
 }
 
 
@@ -239,7 +238,9 @@ textarea{
     margin-right: 75px; */
 }
 
-
+.contactLogo{
+    font-size: 90px;
+}
 
 /*End of Contact Modal*/
 
@@ -285,8 +286,6 @@ textarea{
 .close:hover{
     cursor: pointer;
 }
-
-.closeMessage
 
 /*End Success/Fail Modals*/
 
