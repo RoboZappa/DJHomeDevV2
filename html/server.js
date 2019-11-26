@@ -1,6 +1,6 @@
 const express = require('express');
 const http = require('http');
-const sendMail = require('./public/js/djemaildev')
+const sendMail = require('./public/js/djemaildev');
 const app = express();
 
 app.use(express.urlencoded({

@@ -1,3 +1,21 @@
+/* Scrollbar  */
+body::-webkit-scrollbar {
+    width: 0.3em;
+    overflow: scroll;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px whitesmoke;
+    box-shadow: inset 0 0 6px whitesmoke;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: .2px solid white;
+  border-radius: 1px;
+}
+
+
 /*Sizing & Transition*/
 *,
 *:after,
@@ -23,19 +41,6 @@ body {
     font-family: "Montserrat", cursive;
 }
 
-.jerryContainer{
-    max-width: 67%;
-}
-
-.jerry{
-    margin: 0 auto;
-    width: 100%;
-}
-
-.jerryH1{
-    text-align: left;
-}
-
 button {
     color: none;
 }
@@ -48,6 +53,12 @@ a {
 a:hover {
     font-weight: bold;
     cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 h1,
@@ -149,6 +160,11 @@ header {
     font-size: 75px;
 }
 
+a:hover{
+    font-weight: 100;
+    color: whitesmoke;
+}
+
 #smallLogo {
     display: none;
 }
@@ -164,7 +180,6 @@ header {
     right: 0;
     width: 2.4rem;
 }
-
 
 /*Contact Form Modal*/
 
@@ -215,10 +230,6 @@ header {
     display: inline;
 }
 
-/* #email{
-    width: 280px;
-} */
-
 input{
     background-color: whitesmoke;
     color: black;
@@ -229,7 +240,6 @@ textarea{
     color: black;
     height: 140px;
 }
-
 
 .logoBox{
     width: 50%;
@@ -243,7 +253,6 @@ textarea{
 }
 
 /*End of Contact Modal*/
-
 
 /*Success/Fail Modals*/
 #success{
@@ -289,7 +298,6 @@ textarea{
 
 /*End Success/Fail Modals*/
 
-
 @media only screen and (max-width: 1310px) {
     .logo {
         position: relative;
@@ -299,7 +307,6 @@ textarea{
     .container {
         width: 95%;
     }
-
 }
 
 @media only screen and (max-width: 790px) {
@@ -337,20 +344,6 @@ textarea{
         float: none;
         padding-left: 20px;
     }
-
-    /* input{
-        width: 45%;
-        min-width: 288px;
-    } */
-
-    /* #email{
-        width: 60%;
-        min-width: 288px;
-    } */
-
-    /* textarea{
-        width: 80%;
-    } */
 
     .formButtons{
         display: inline;
