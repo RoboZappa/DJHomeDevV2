@@ -5,10 +5,10 @@ const forceSsl = require('express-force-ssl');
 const fs = require('fs');
 const sendMail = require('./public/js/djemaildev');
 const app = express();
-const options = {
-    key: fs.readFileSync('./creds/key.pem', 'utf8'),
-    cert: fs.readFileSync('./creds/server.crt', 'utf8')
-}
+// const options = {
+//     key: fs.readFileSync('./creds/key.pem', 'utf8'),
+//     cert: fs.readFileSync('./creds/server.crt', 'utf8')
+// }
 app.use(express.urlencoded({
     extended: false
 }));
