@@ -257,8 +257,8 @@ textarea{
 /*Success/Fail Modals*/
 #success{
     display: none;
-    position: absolute;
-    top: 5px;
+    position: fixed;
+    padding-left: 80px;
     background-color: hsl(171, 100%, 41%);
     z-index: 1;
 }
@@ -272,9 +272,9 @@ textarea{
 }
 
 #fail{
-    display: none;
-    position: absolute;
-    top: 5px;
+    display: block;
+    position: fixed;
+    padding-left: 80px;
     background-color: hsl(348, 100%, 61%);
     z-index: 2;
 }
@@ -288,7 +288,6 @@ textarea{
 }
 
 .close{
-    text-justify: auto;
     text-align: center;
 }
 
@@ -347,5 +346,29 @@ textarea{
 
     .formButtons{
         display: inline;
+    }
+
+    #success p{
+        font-size: 15px;
+    }
+
+    #fail p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 584px) {
+    .close{
+        display: none;
+    }
+
+    #success p{
+        padding-left: 0;
+        padding-right: 80px;
+    }
+
+    #fail p{
+        padding-left: 0;
+        padding-right: 80px;
     }
 }

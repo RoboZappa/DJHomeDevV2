@@ -11,28 +11,43 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee|Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/imgs/3levelsInverseIcon.png">
-    
+
     <!-- Primary Meta Tags -->
     <title>DJ Web Dev</title>
     <meta name="title" content="DJ Web Dev">
-    <meta name="description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta name="description"
+        content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://djwebdev.net/">
     <meta property="og:title" content="DJ Web Dev">
-    <meta property="og:description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta property="og:description"
+        content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
     <meta property="og:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://djwebdev.net/">
     <meta property="twitter:title" content="DJ Web Dev">
-    <meta property="twitter:description" content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
+    <meta property="twitter:description"
+        content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder.">
     <meta property="twitter:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png">
 </head>
 
 <body>
+    <div class="u-full-width" id="success">
+        <div class="eleven columns">
+            <p>Success! Your Message Has Been Received!</p>
+        </div>
+        <p class="one column close" onclick="closeOut('success')">X</p>
+    </div>
+    <div class="u-full-width" id="fail">
+        <div class="eleven columns">
+            <p>Oh No! Your Message Failed to Send. Please Try Again.</p>
+        </div>
+        <p class="one column close" onclick="closeOut('fail')">X</p>
+    </div>
     <div id="container" class="container">
         <h1 class="logo" id="bigLogo"><a href="index.html" class="logoLink">_DJ<br>WEB<br>DEV</a></h1>
         <div class="row">
@@ -85,18 +100,6 @@
         <!-- <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
             title="Creative Commons BY 3.0" target="_blank">CC
             3.0 BY</a> -->
-        <div class="u-full-width" id="success">
-            <div class="eleven columns">
-                <p style="padding-left: 80px">Success! Your Message Has Been Received!</p>
-            </div>
-            <p class="one column close" onclick="closeOut('success')">X</p>
-        </div>
-        <div class="u-full-width" id="fail">
-                <div class="eleven columns">
-                    <p style="padding-left: 80px">Oh No! Your Message Failed to Send. Please Try Again.</p>
-                </div>
-                <p class="one column close" onclick="closeOut('fail')">X</p>
-            </div>
     </div>
     <div id="contact">
         <div id="formModal">
