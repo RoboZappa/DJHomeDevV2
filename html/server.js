@@ -1,13 +1,17 @@
 const express = require('express');
 const http = require('http');
 const https = require('https');
-const forceSsl = require('express-force-ssl');
+// const forceSsl = require('express-force-ssl');
 const fs = require('fs');
 const sendMail = require('./public/js/djemaildev');
 const app = express();
 // const options = {
 //     key: fs.readFileSync('./creds/key.pem', 'utf8'),
 //     cert: fs.readFileSync('./creds/server.crt', 'utf8')
+// }
+// const options = {
+//     key: fs.readFileSync('/etc/letsencrypt/live/djwebdev.net/privkey.pem', 'utf8'),
+//     cert: fs.readFileSync('/etc/letsencrypt/live/djwebdev.net/cert.pem', 'utf8')
 // }
 app.use(express.urlencoded({
     extended: false
@@ -28,9 +32,9 @@ app.post('/email', (req, res) => {
     });
 })
 
-app.use('/', express.static('public'), forceSsl);
+app.use('/', express.static('public'));
 
-//http.createServer(app).listen(80);
-//console.log('Express http server running on port 80');
-https.createServer(app).listen(443);
-console.log('Express https server running on port 443');
+http.createServer(app).listen(8000);
+// console.log('Express http server running on port 4000');
+// https.createServer(options, app).listen(8000);
+console.log('Express https server running on port 8000');
