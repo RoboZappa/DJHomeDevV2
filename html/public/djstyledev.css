@@ -255,10 +255,14 @@ textarea{
 /*End of Contact Modal*/
 
 /*Success/Fail Modals*/
+.narrowView {
+    display: none;
+}
+
 #success{
     display: none;
     position: fixed;
-    padding-left: 80px;
+    /* padding-left: 80px; */
     background-color: hsl(171, 100%, 41%);
     z-index: 1;
 }
@@ -266,7 +270,7 @@ textarea{
 #success p{
     font-weight: bold;
     text-align: center;
-    margin: 10px;
+    margin: 10px 5px;
     color: whitesmoke;
     font-size: 20px;
 }
@@ -274,7 +278,7 @@ textarea{
 #fail{
     display: block;
     position: fixed;
-    padding-left: 80px;
+    /* padding-left: 80px; */
     background-color: hsl(348, 100%, 61%);
     z-index: 2;
 }
@@ -282,13 +286,13 @@ textarea{
 #fail p{
     font-weight: bold;
     text-align: center;
-    margin: 10px;
+    margin: 10px 5px;
     color: whitesmoke;
     font-size: 20px;
 }
 
 .close{
-    text-align: center;
+    text-align: right;
 }
 
 .close:hover{
@@ -357,11 +361,14 @@ textarea{
     }
 }
 
-@media only screen and (max-width: 584px) {
-    .close{
-        display: none;
+@media only screen and (max-width: 590px) {
+  
+     .close{
+        margin: 0;
+        padding: 0;
     }
 
+    /*
     #success p{
         padding-left: 0;
         padding-right: 80px;
@@ -370,5 +377,36 @@ textarea{
     #fail p{
         padding-left: 0;
         padding-right: 80px;
+    } */
+}
+
+@media only screen and (max-width: 590px) {
+    .leftAnchor {
+        padding-left: 40px;
+    }
+
+    .narrowView {
+        display: flex;
+    }
+
+    .wideView {
+        display: none;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .leftAnchor {
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 315px) {
+    .leftAnchor {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 215px) {
+    .leftAnchor {
+        padding-left: 10px;
     }
 }
