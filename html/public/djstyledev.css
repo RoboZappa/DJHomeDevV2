@@ -91,18 +91,18 @@ header {
     box-sizing: border-box;
 }
 
-#hideMenu{
+#hideMenu {
     margin-bottom: -40px;
     z-index: 1;
     text-align: center;
 }
 
-#navBar{
+#navBar {
     display: none;
     z-index: -1;
 }
 
-.imgContent{
+.imgContent {
     margin: 10px;
     margin-bottom: 100px;
     border: 1px solid whitesmoke;
@@ -116,7 +116,7 @@ header {
     margin-bottom: 30px;
 }
 
-#mic{
+#mic {
     margin-top: 5px;
 }
 
@@ -125,7 +125,7 @@ header {
     max-width: 875px;
 }
 
-.row{
+.row {
     text-align: center;
 }
 
@@ -183,72 +183,70 @@ a:hover{
 
 /*Contact Form Modal*/
 
-#contact{
+#contact {
     display: none;
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0,0.8);
+    background-color: rgb(0, 0, 0, 0.8);
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-#formModal{
+#formModal {
     position: fixed;
     top: 25%;
     left: 50%;
     margin-top: -125px;
     margin-left: -400px;
-    height: 500px; 
+    height: 500px;
     width: 800px;
     background-color: black;
     border: 1px solid whitesmoke;
     color: whitesmoke;
 }
 
-#form{
+#form {
     width: 50%;
     float: left;
     padding-left: 20px;
 }
 
-#contact li{
+#contact li {
     list-style-type: none;
     padding-top: 10px;
     padding-left: 10px;
 }
 
-.social{
+.social {
     text-align: center;
     margin-bottom: -15px;
     padding-top: 15px;
 }
 
-.social li{
+.social li {
     font-family: 'Bungee', cursive;
     display: inline;
 }
 
-input{
+input {
     background-color: whitesmoke;
     color: black;
 }
 
-textarea{
+textarea {
     background-color: whitesmoke;
     color: black;
     height: 140px;
 }
 
-.logoBox{
+.logoBox {
     width: 50%;
     float: right;
-    /* margin-top: 40px;
-    margin-right: 75px; */
 }
 
-.contactLogo{
+.contactLogo {
     font-size: 90px;
 }
 
@@ -259,15 +257,16 @@ textarea{
     display: none;
 }
 
-#success{
+#success {
     display: none;
     position: fixed;
-    /* padding-left: 80px; */
+    width: 70%;
+    left: 15%;
     background-color: hsl(171, 100%, 41%);
     z-index: 1;
 }
 
-#success p{
+#success p {
     font-weight: bold;
     text-align: center;
     margin: 10px 5px;
@@ -275,15 +274,16 @@ textarea{
     font-size: 20px;
 }
 
-#fail{
+#fail {
     display: block;
     position: fixed;
-    /* padding-left: 80px; */
+    left: 15%;
+    width: 70%;
     background-color: hsl(348, 100%, 61%);
     z-index: 2;
 }
 
-#fail p{
+#fail p {
     font-weight: bold;
     text-align: center;
     margin: 10px 5px;
@@ -291,11 +291,11 @@ textarea{
     font-size: 20px;
 }
 
-.close{
+.close {
     text-align: right;
 }
 
-.close:hover{
+.close:hover {
     cursor: pointer;
 }
 
@@ -312,6 +312,18 @@ textarea{
     }
 }
 
+@media only screen and (max-width: 890px) {
+    #success {
+        width: 100%;
+        left: 0;
+    }
+
+    #fail {
+        width: 100%;
+        left: 0;
+    }
+}
+
 @media only screen and (max-width: 790px) {
     header {
         position: relative;
@@ -323,25 +335,25 @@ textarea{
     }
 
     #bulb {
-        top: 10px; 
+        top: 10px;
         right: 10px;
     }
 
-    .logoBox{
+    .logoBox {
         display: none;
     }
 
-    #formModal{
+    #formModal {
         position: fixed;
         top: 0;
         left: 0;
         margin: 0 auto;
-        height: 100%; 
+        height: 100%;
         width: 100%;
         border: none;
-    }    
+    }
 
-    #form{
+    #form {
         width: 100%;
         margin: 0 auto;
         float: none;
@@ -352,32 +364,20 @@ textarea{
         display: inline;
     }
 
-    #success p{
+    #success p {
         font-size: 15px;
     }
 
-    #fail p{
+    #fail p {
         font-size: 15px;
     }
 }
 
 @media only screen and (max-width: 590px) {
-  
-     .close{
+    .close {
         margin: 0;
         padding: 0;
     }
-
-    /*
-    #success p{
-        padding-left: 0;
-        padding-right: 80px;
-    }
-
-    #fail p{
-        padding-left: 0;
-        padding-right: 80px;
-    } */
 }
 
 @media only screen and (max-width: 590px) {
@@ -393,6 +393,7 @@ textarea{
         display: none;
     }
 }
+
 @media only screen and (max-width: 400px) {
     .leftAnchor {
         padding-left: 30px;

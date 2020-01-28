@@ -37,15 +37,21 @@
 
 <body>
     <div class="row u-full-width" id="success">
-        <div class="eleven columns">
+        <div class="twelve columns narrowView">
+            <p class="leftAnchor"></p>
             <p>Success! Your Message Has Been Received!</p>
+            <p style="padding-left:15px;" onclick="closeOut('success')">X</p>
         </div>
-        <p class="one column close" onclick="closeOut('success')">X</p>
+        <div class="row wideView">
+            <p class="one column close"></p>
+            <p class="ten columns">Success! Your Message Has Been Received!</p>
+            <p class="one column close" onclick="closeOut('success')">X</p>
+        </div>
     </div>
     <div class="u-full-width" id="fail">
         <div class="twelve columns narrowView">
             <p class="leftAnchor"></p>
-            <p onclick="closeOut('fail')">Oh No! Your Message Failed to Send. Please Try Again.</p>
+            <p>Oh No! Your Message Failed to Send. Please Try Again.</p>
             <p style="padding-left:15px;" onclick="closeOut('fail')">X</p>
         </div>
         <div class="row wideView">
