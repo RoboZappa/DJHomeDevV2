@@ -7,7 +7,7 @@
     "aws-sdk": "^2.533.0",
     "express": "^4.17.1",
     "expressjs": "^1.0.1",
-    "npm": "^6.12.0"
+    "npm": "^6.14.6"
   },
   "devDependencies": {},
   "scripts": {
