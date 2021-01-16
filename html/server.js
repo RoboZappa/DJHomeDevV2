@@ -4,7 +4,7 @@ const https = require('https');
 const fs = require('fs');
 const sendMail = require('./public/js/djemaildev');
 const app = express();
-const httpPort = 8000;
+const httpPort = 80;
 const httpsPort = 443;
 
 app.use(express.urlencoded({
@@ -13,16 +13,16 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 // Production Creds
-//const options = {
-    // key: fs.readFileSync('/etc/letsencrypt/live/djwebdev.net/privkey.pem', 'utf8' ),
-    // cert: fs.readFileSync('/etc/letsencrypt/live/djwebdev.net/cert.pem', 'utf8')
-//}
+const options = {
+    key: fs.readFileSync('/etc/letsencrypt/live/djwebdev.net/privkey.pem', 'utf8' ),
+    cert: fs.readFileSync('/etc/letsencrypt/live/djwebdev.net/cert.pem', 'utf8')
+}
 
 // Local Creds
-const options = {
-     key: fs.readFileSync('./creds/key.pem', 'utf8' ),
-     cert: fs.readFileSync('./creds/server.crt', 'utf8')
-}
+// const options = {
+//      key: fs.readFileSync('./creds/key.pem', 'utf8' ),
+//      cert: fs.readFileSync('./creds/server.crt', 'utf8')
+// }
 
 // Send Email method from djemaildev.js
 app.post('/email', (req, res) => {
@@ -39,17 +39,9 @@ app.post('/email', (req, res) => {
     });
 });
 
-// http.get('*', function(req, res) {
-//     if (req.protocol === 'http') {
-//         res.redirect('https://djwebdev.net');
-//     }
-// })
-
 app.use(function (req, res, next) {
-    console.log('Something: ', req.get('Host'));
     if (!req.secure) {
-        console.log(req.get('Host'));
-        return res.redirect(['https://', req.get('Host'), req.url].join(''));
+        return res.redirect(['https://djwebdev.net']);
     }
     next();
 });
