@@ -275,7 +275,7 @@ textarea {
 }
 
 #fail {
-    display: block;
+    display: none;
     position: fixed;
     left: 15%;
     width: 70%;
