@@ -1,0 +1,11 @@
+
+
+thead tr th {
+    font-size: 4.0rem;
+    font-family: 'Bungee Outline', cursive;
+}
+
+tbody tr th {
+    font-size: 2.0rem;
+    font-family: 'Bungee Shade', cursive;
+}
