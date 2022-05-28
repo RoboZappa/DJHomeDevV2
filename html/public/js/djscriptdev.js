@@ -106,7 +106,7 @@ $('form').on('submit', e => {
         message
     }
 
-    $.post('./email', data, function() {
+    $.post('/email', data, function() {
         console.log('Server received our data');
     });
 })

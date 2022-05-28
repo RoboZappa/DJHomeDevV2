@@ -25,7 +25,7 @@ const options = {
 // }
 
 // Send Email method from djemaildev.js
-app.post('./email', (req, res) => {
+app.post('/email', (req, res) => {
     const { email, name, message } = req.body;
     console.log('Data: ', req.body);
 
