@@ -1,3 +1,9 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* Scrollbar  */
 body::-webkit-scrollbar {
     width: 0.3em;
@@ -10,10 +16,24 @@ body {
     font-family: "Montserrat", cursive;
 }
 
-/* Reset */
-*{
-    margin: 0;
-    padding: 0;
+header > .navbar {
+    padding: 1rem;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    grid-template-columns: repeat(2, auto);
+}
+
+header > .navbar > div > ul > li {
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+}
+
+header > .navbar > div > ul > li > a {
+    text-decoration: underline;
+    color: white;
+    font-size: 12px;
 }
 
 .container{
@@ -62,14 +82,13 @@ h2, h3{
     font-size: 7.0rem;
 }
 
-/* .header{
-    display: grid;
-    grid-template-columns: 1fr auto;
-} */
+h4 {
+    font-size: 2.5rem;
+}
 
-/* .headerLogo{
-    
-} */
+p {
+    font-size: 1.5rem;
+}
 
 button{
     font-family: 'Bungee', cursive;
@@ -82,23 +101,4 @@ button:hover{
     cursor: pointer;
 }
 
-/* .navbar{
-    display: grid;
-}
-
-#menuButton{
-
-}
-
-.menuOptions{
-    display: grid;
-}
-
-.lightSwitch{
- 
-}
-
-#bulb{
-    width: 2.4rem;
-} */
 
