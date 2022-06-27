@@ -37,13 +37,11 @@ header > .navbar > div > ul > li > a {
     text-decoration: underline;
     color: white;
     font-size: 12px;
-=======
 /* Reset */
 *{
     margin: 0;
     padding: 0;
     border: 0;
->>>>>>> Stashed changes:html/public/djstyledev.css
 }
 
 .container{
