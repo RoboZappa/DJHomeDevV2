@@ -14,8 +14,10 @@ body {
     background-color: black;
     color: whitesmoke;
     font-family: "Montserrat", cursive;
+    font-size: 1.4rem;
 }
 
+<<<<<<< Updated upstream:html/public/DJWebDevV3/styles/djstyledev.css
 header > .navbar {
     padding: 1rem;
     display: grid;
@@ -34,13 +36,22 @@ header > .navbar > div > ul > li > a {
     text-decoration: underline;
     color: white;
     font-size: 12px;
+=======
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+>>>>>>> Stashed changes:html/public/djstyledev.css
 }
 
 .container{
-    margin-top: -20px;
     display: grid;
+    margin: 0 auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    max-width: 1200px;
+    align-items: center;
 }
 
 .content{
@@ -48,11 +59,12 @@ header > .navbar > div > ul > li > a {
     align-content: center;
     text-align: center;
     height: 100vh;
+    margin: 10px;
 }
 
 #whoWeAre{
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto 1fr;
+    grid-template-rows: repeat(2, auto);
 }
 
 .djWebDevIs{
