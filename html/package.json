@@ -4,6 +4,7 @@
   "description": "Home of DJWebDev",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "expressjs": "^1.0.1",
     "nodemailer": "^6.7.5",

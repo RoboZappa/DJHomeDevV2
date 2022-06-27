@@ -1,104 +1,137 @@
 /* Reset */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* Scrollbar  */
 body::-webkit-scrollbar {
-    width: 0.3em;
-    overflow: scroll;
+  width: 0.3em;
+  overflow: scroll;
 }
 
 body {
-    background-color: black;
-    color: whitesmoke;
-    font-family: "Montserrat", cursive;
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Montserrat", cursive;
 }
 
 header > .navbar {
-    padding: 1rem;
-    display: grid;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    grid-template-columns: repeat(2, auto);
+  padding: 1rem;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  grid-template-columns: repeat(2, auto);
 }
 
 header > .navbar > div > ul > li {
-    display: inline;
-    text-decoration: none;
-    list-style: none;
+  display: inline;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
 }
 
 header > .navbar > div > ul > li > a {
-    text-decoration: underline;
-    color: white;
-    font-size: 12px;
+  text-decoration: underline;
+  color: white;
+  font-size: 12px;
 }
 
-.container{
-    margin-top: -20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
 }
 
-.content{
-    display: grid;
-    align-content: center;
-    text-align: center;
-    height: 100vh;
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 
-#whoWeAre{
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto 1fr;
+.container {
+  margin-top: -20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
 }
 
-.djWebDevIs{
-    display: grid;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
+.content {
+  display: grid;
+  align-content: center;
+  text-align: center;
+  height: 100vh;
 }
 
-.bios{
-    display: grid;
-    grid-column: 1 / -1;
-    grid-row: 2 / -1;
-    grid-template-columns: repeat(2, auto);
+#whoWeAre {
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto 1fr;
 }
 
-h1, h2, h3{
-    font-family: 'Bungee Shade', cursive;
-    letter-spacing: -.1rem;
+.djWebDevIs {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
 }
 
-h1{
-    font-size: 10.0rem;
-    line-height: 1.2;
+.bios {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  grid-template-columns: repeat(2, auto);
 }
 
-h2, h3{
-    font-size: 7.0rem;
+h1, h2, h3 {
+  font-family: "Bungee Shade", cursive;
+  letter-spacing: -0.1rem;
+}
+
+h1 {
+  font-size: 10rem;
+  line-height: 1.2;
+}
+
+h2, h3 {
+  font-size: 7rem;
 }
 
 h4 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
-button{
-    font-family: 'Bungee', cursive;
-    color: whitesmoke;
-    background-color: black;
-    border: none;
+button {
+  font-family: "Bungee", cursive;
+  color: whitesmoke;
+  background-color: black;
+  border: none;
 }
 
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
 
+/* email-modal component  */
 
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}

@@ -67,42 +67,22 @@
             <ul v-show="hovering" class="menuOptions">
               <li><a href="#whoWeAre">Who We Are</a></li>
               <li><a href="#whatWeDo">What We Do</a></li>
-              <li><a href="#howToReachUs">How to Reach Us</a></li>
+              <li>
+                <a
+                  v-on:click="sendMail('bob@gmail.com','Bob Sacamano', 'Wow an email from the front end')"
+                  >How to Reach Us</a>
+              </li>
               <li><a href="#whereWeveBeen">Where We've Been</a></li>
             </ul>
             <span v-show="!hovering" id="menu">Menu</span>
           </div>
         </div>
       </header>
+      <email-modal v-show="modal"></email-modal>
       <div class="container">
         <div class="content">
           <h1>_DJ<br />Web<br />Dev<br /></h1>
         </div>
-        <!-- <div class="header">
-            <div class="headerLogo">
-                <h1>_DJ<br>Web<br>Dev<br></h1>
-            </div>
-            <div class="navbar">
-                <button id="menuButton">
-                    <p>Menu</p>
-                </button>
-                <div class="menuOptions">
-                    <div><a href="#whoWeAre">Who We Are</a></div>
-                    <div><a href="#whatWeDo">What We Do</a></div>
-                    <div><a href="#howToReachUs">How to Reach Us</a></div>
-                    <div><a href="#whereWeveBeen">Where We've Been</a></div>
-                </div>
-            </div>
-            <div class="lightSwitch">
-                <button>
-                    <span>
-                        <h5>Lights Off</h5>
-                        <img id="bulb" src="assets/icons/lightbulbOff.png" alt="Light Bulb">
-                    </span>
-                </button>
-            </div>
-        </div> -->
-
         <div class="content">
           <h2>Mic Drop</h2>
           <p>
