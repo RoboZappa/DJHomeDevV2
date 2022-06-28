@@ -60,25 +60,27 @@
 
   <body>
     <div id="app">
-      <header class="header">
-        <div class="navbar">
-          <h5>_DJWebDev</h5>
-          <div @mouseover="hovering = true" @mouseleave="hovering = false">
-            <ul v-show="hovering" class="menuOptions">
-              <li><a href="#whoWeAre">Who We Are</a></li>
-              <li><a href="#whatWeDo">What We Do</a></li>
-              <li>
-                <a
-                  @click="sendEmail('bob@gmail.com','Bob Sacamano', 'Wow an email from the front end')"
-                  >How to Reach Us</a
-                >
-              </li>
-              <li><a href="#whereWeveBeen">Where We've Been</a></li>
-            </ul>
-            <span v-show="!hovering" id="menu">Menu</span>
+        <div class="header">
+          <div class="miniLogo">
+            <h5>_DJWebDev</h5>
           </div>
+          <div class="navbar" @mouseover="hovering = true" @mouseleave="hovering = false">
+            <div v-show="!hovering" id="menu">
+              <p>Menu</p>
+            </div>
+            <div v-show="hovering" class="menuOptions">
+              <a href="#whoWeAre">Who We Are</a>
+              <a href="#whatWeDo">What We Do</a>
+              <a 
+                v-on:click=
+                  "sendMail('bob@gmail.com','Bob Sacamano', 'Wow an email from the front end')">
+                  How to Reach Us
+              </a>
+              <a href="#whereWeveBeen">Where We've Been</a>
+            </div>
+          </div>
+          <div class="filler"></div>
         </div>
-      </header>
       <email-modal v-show="modal"></email-modal>
       <div class="container">
         <div class="content">
@@ -109,7 +111,7 @@
             </div>
           </div>
         </div>
-        <div class="content">
+        <div class="content" id="whatWeDo">
           <h2>What We Do</h2>
           <p>
             DJ WebDev promises to deliver a web experience that is three things:

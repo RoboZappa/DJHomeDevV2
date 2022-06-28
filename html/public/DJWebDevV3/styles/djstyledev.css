@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 /* Scrollbar  */
@@ -17,25 +18,55 @@ body {
     font-size: 1.4rem;
 }
 
-header > .navbar {
-  padding: 1rem;
+.header{
   display: grid;
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  grid-template-columns: repeat(2, auto);
+  position: fixed;
+  width: 100%;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: black;
+  opacity: .85;
 }
 
-header > .navbar > div > ul > li {
-  display: inline;
+.miniLogo{
+  grid-column: 1 / 2;
+  text-align: start;
+  padding-left: 20px;
+  font-size: 2.0rem;
+  font-family: "Bungee Shade", cursive;
+}
+
+.navbar{
+  grid-column: 2 / 3;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.menuOptions>a{
+  font-size: 1.2rem;
+  padding: 10px;
   text-decoration: none;
   list-style: none;
   cursor: pointer;
 }
 
-header > .navbar > div > ul > li > a {
-    text-decoration: underline;
-    color: white;
-    font-size: 12px;
+a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a:hover{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+a:visited{
+  color: whitesmoke;
+}
+
+.filler{
+  grid-column: 3 / -1;
 }
 
 .container{
@@ -55,9 +86,9 @@ header > .navbar > div > ul > li > a {
     margin: 10px;
 }
 
-#whoWeAre{
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
+#whoWeAre {
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
 }
 
 .djWebDevIs {
