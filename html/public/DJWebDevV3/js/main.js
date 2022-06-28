@@ -67,11 +67,6 @@ Vue.component("email-modal", {
 });
 
 
-function sendEmail(email, name, message) {
-  const response = axios.post(window.location.href + 'email', email, name, message);
-  console.log(response);
-}
-
 var app = new Vue({
   el: "#app",
   data: {
@@ -79,6 +74,15 @@ var app = new Vue({
     modal: false
   },
   methods: {
-    
+    sendEmail(email, name, message) {
+      const url = window.location.origin + '/email';
+      const data = {
+        email: email,
+        name: name,
+        message: message
+      }
+      console.log('url', url);
+      const response = axios.post(url, data);
+    }
   },
 });

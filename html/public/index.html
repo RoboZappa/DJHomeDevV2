@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< Updated upstream
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
@@ -23,17 +22,6 @@
       type="image/png"
       href="assets/imgs/3levelsInverseIcon.png"
     />
-=======
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>DJ Web Dev</title>
-    <link rel="stylesheet" type="text/css" href="djstyledev.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee|Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/imgs/3levelsInverseIcon.png">
->>>>>>> Stashed changes
 
     <!-- Primary Meta Tags -->
     <title>DJ Web Dev</title>
@@ -81,8 +69,9 @@
               <li><a href="#whatWeDo">What We Do</a></li>
               <li>
                 <a
-                  v-on:click="sendMail('bob@gmail.com','Bob Sacamano', 'Wow an email from the front end')"
-                  >How to Reach Us</a>
+                  @click="sendEmail('bob@gmail.com','Bob Sacamano', 'Wow an email from the front end')"
+                  >How to Reach Us</a
+                >
               </li>
               <li><a href="#whereWeveBeen">Where We've Been</a></li>
             </ul>

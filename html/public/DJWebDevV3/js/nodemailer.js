@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
+    scope: 'https://mail.google.com',
     port: 465,
     secure: true,
     auth: {
@@ -20,15 +21,6 @@ const options = {
     subject: 'Testing Nodemailer',
     text: 'Wow, what a test'
 }
-
-// transporter.sendMail(options, function(err, info) {
-//     if(err) {
-//         console.log('Env', process.env.CLIENT_ID);
-//         console.log(err);
-//         return;
-//     }
-//     console.log(info.response);
-// });
 
 const sendNodeMail = (email, name, message) => {
     options.from = email;
