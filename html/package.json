@@ -1,12 +1,13 @@
 {
   "name": "djhomedev",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Home of DJWebDev",
   "main": "server.js",
   "dependencies": {
-    "aws-sdk": "^2.533.0",
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "expressjs": "^1.0.1",
+    "nodemailer": "^6.7.5",
     "npm": "^6.14.6"
   },
   "devDependencies": {},
