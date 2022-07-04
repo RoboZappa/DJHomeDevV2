@@ -25,7 +25,7 @@
 
     <!-- Primary Meta Tags -->
     <title>DJ Web Dev</title>
-    <meta name="title" content="DJ Web Dev" />
+    <meta name="title" content="DJ WebDev" />
     <meta
       name="description"
       content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder."
@@ -47,7 +47,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="http://djwebdev.net/" />
-    <meta property="twitter:title" content="DJ Web Dev" />
+    <meta property="twitter:title" content="DJ WebDev" />
     <meta
       property="twitter:description"
       content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder."
@@ -60,6 +60,7 @@
 
   <body>
     <div id="app">
+        <email-modal v-show="modal"></email-modal>
         <div class="header">
           <div class="miniLogo">
             <h5>_DJWebDev</h5>
@@ -73,7 +74,7 @@
               <a href="#whatWeDo">What We Do</a>
               <a 
                 v-on:click=
-                  "sendMail('bob@gmail.com','Bob Sacamano', 'Wow an email from the front end')">
+                  "modal=true">
                   How to Reach Us
               </a>
               <a href="#whereWeveBeen">Where We've Been</a>
@@ -81,10 +82,9 @@
           </div>
           <div class="filler"></div>
         </div>
-      <email-modal v-show="modal"></email-modal>
       <div class="container">
         <div class="content">
-          <h1>_DJ<br />Web<br />Dev<br /></h1>
+          <h1>_DJ<br />Web<br />Dev</h1>
         </div>
         <div class="content">
           <h2>Mic Drop</h2>
