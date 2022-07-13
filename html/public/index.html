@@ -60,28 +60,34 @@
 
   <body>
     <div id="app">
-        <email-modal v-show="modal"></email-modal>
-        <div class="header">
-          <div class="miniLogo">
-            <h5>_DJWebDev</h5>
-          </div>
-          <div class="navbar" @mouseover="hovering = true" @mouseleave="hovering = false">
-            <div v-show="!hovering" id="menu">
-              <p>Menu</p>
-            </div>
-            <div v-show="hovering" class="menuOptions">
-              <a href="#whoWeAre">Who We Are</a>
-              <a href="#whatWeDo">What We Do</a>
-              <a 
-                v-on:click=
-                  "modal=true">
-                  How to Reach Us
-              </a>
-              <a href="#whereWeveBeen">Where We've Been</a>
-            </div>
-          </div>
-          <div class="filler"></div>
+      <transition name="fade" appear>
+        <email-modal
+          v-if="showModal"
+          @eventname="updateparent"
+          @event-submit="catchSubmit"
+        ></email-modal>
+      </transition>
+      <div class="header">
+        <div class="miniLogo">
+          <h5>_DJWebDev</h5>
         </div>
+        <div
+          class="navbar"
+          @mouseover="isHovering = true"
+          @mouseleave="isHovering = false"
+        >
+          <div v-show="!isHovering" id="menu">
+            <p>Menu</p>
+          </div>
+          <div v-show="isHovering" class="menuOptions">
+            <a href="#whoWeAre">Who We Are</a>
+            <a href="#whatWeDo">What We Do</a>
+            <a @click="showModal = true"> How to Reach Us </a>
+            <a href="#whereWeveBeen">Where We've Been</a>
+          </div>
+        </div>
+        <div class="filler"></div>
+      </div>
       <div class="container">
         <div class="content">
           <h1>_DJ<br />Web<br />Dev</h1>

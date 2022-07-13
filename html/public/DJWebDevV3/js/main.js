@@ -1,6 +1,5 @@
 Vue.component("email-modal", {
-  template: 
-  `<div class="modal-background">
+  template: `<div class="modal-background">
     <div class="modal">
       <div class="social">
         <a href="http://www.facebook.com/officialdjwebdev"target="_blank">Facebook</a>
@@ -20,35 +19,57 @@ Vue.component("email-modal", {
           <textarea class="u-full-width" placeholder="Message..." id="message"></textarea>
         </div>
         <div class="formButtons">
-          <button type="submit" value="Submit" onclick="submitForm(email)">SUBMIT</button>
-          <button v-bind:modal="false" v-on:input="modal=$event.target.value" type="button" id="close">CLOSE</button>
+          <button @click="submitModal()">SUBMIT</button>
+          <button type="button" id="close" @click="closeModal">CLOSE</button>
         </div>
       </div>
       <div class="modalLogo">
         <h3>_DJ<br>Web<br>Dev</h3>
       </div>
     </div>
-  </div>`
-  ,props:["modal"]
+  </div>`,
+  methods: {
+    closeModal() {
+      console.log("closeDialog");
+      this.$emit("eventname", false);
+    },
+    submitModal() {
+      console.log("submitModal");
+      const data = {
+        email: document.getElementById('email').value,
+        name: document.getElementById('name').value,
+        message: document.getElementById('message').value,
+      };
+      console.log("submitModal", data);
+      this.$emit("event-submit", data);
+    },
+  },
 });
-
 
 var app = new Vue({
   el: "#app",
-  data: {
-    hovering: false,
-    modal: false
+  data() {
+    return {
+      isHovering: false,
+      showModal: false,
+    };
   },
   methods: {
-    sendEmail(email, name, message) {
-      const url = window.location.origin + '/email';
-      const data = {
-        email: email,
-        name: name,
-        message: message
-      }
-      console.log('url', url);
-      const response = axios.post(url, data);
-    }
+    sendEmail(data) {
+      const url = window.location.origin + "/email";
+      console.log("url", url);
+      axios.post(url, data);
+    },
+    catchSubmit(emailData) {
+      console.log("catchSubmit");
+      this.sendEmail(emailData);
+    },
+    updateparent(variable) {
+      console.log("updateParent: ", variable);
+      this.showModal = variable;
+    },
+    // showModal() {
+    //   this.modal = this.modal ? false : true;
+    // },
   },
 });
