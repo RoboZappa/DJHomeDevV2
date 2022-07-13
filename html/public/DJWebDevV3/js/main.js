@@ -1,5 +1,4 @@
 Vue.component("email-modal", {
-  props: ["email", "name", "message"],
   template: `<div class="modal-background">
     <div class="modal">
       <div id="contact">
@@ -49,11 +48,11 @@ Vue.component("email-modal", {
                   <button
                     type="submit"
                     value="Submit"
-                    onclick="submitForm(email)"
+                    @click="submitModal(email.value, name.value, message.value)"
                   >
                     SUBMIT
                   </button>
-                  <button type="button" id="close" @click="modal = false">
+                  <button type="button" id="close" @click="closeModal">
                     CLOSE
                   </button>
                 </div>
@@ -63,26 +62,49 @@ Vue.component("email-modal", {
         </div>
       </div>
     </div>
-  </div>`
-});
-
-
-var app = new Vue({
-  el: "#app",
-  data: {
-    hovering: false,
-    modal: false
-  },
+  </div>`,
   methods: {
-    sendEmail(email, name, message) {
-      const url = window.location.origin + '/email';
+    closeModal() {
+      console.log("closeDialog");
+      this.$emit("eventname", false);
+    },
+    submitModal(email, name, message) {
+      event.preventDefault();
+      console.log('submitModal');
       const data = {
         email: email,
         name: name,
-        message: message
-      }
-      console.log('url', url);
-      const response = axios.post(url, data);
-    }
+        message: message,
+      };
+      console.log("submitModal", data);
+      this.$emit("eventSubmit", data);
+    },
+  },
+});
+
+var app = new Vue({
+  el: "#app",
+  data() {
+    return {
+      isHovering: false,
+      showModal: false,
+    };
+  },
+  methods: {
+    sendEmail(data) {
+      const url = window.location.origin + "/email";
+      console.log("url", url);
+      axios.post(url, data);
+    },
+    catchSubmit(variable) {
+      sendEmail(variable);
+    },
+    updateparent(variable) {
+      console.log("updateParent: ", variable);
+      this.showModal = variable;
+    },
+    // showModal() {
+    //   this.modal = this.modal ? false : true;
+    // },
   },
 });
