@@ -1,154 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
-    <title>DJ WebDev</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./DJWebDevV3/styles/djstyledev.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee|Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Bungee"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/imgs/3levelsInverseIcon.png"
-    />
 
-    <!-- Primary Meta Tags -->
-    <title>DJ Web Dev</title>
-    <meta name="title" content="DJ WebDev" />
-    <meta
-      name="description"
-      content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder."
-    />
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>DJ WebDev</title>
+  <link rel="stylesheet" type="text/css" href="./DJWebDevV3/styles/djstyledev.css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee|Montserrat" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/imgs/3levelsInverseIcon.png" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://djwebdev.net/" />
-    <meta property="og:title" content="DJ Web Dev" />
-    <meta
-      property="og:description"
-      content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder."
-    />
-    <meta
-      property="og:image"
-      content="http://djwebdev.net/assets/imgs/3levelsInverse.png"
-    />
+  <!-- Primary Meta Tags -->
+  <title>DJ Web Dev</title>
+  <meta name="title" content="DJ WebDev" />
+  <meta name="description"
+    content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder." />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="http://djwebdev.net/" />
-    <meta property="twitter:title" content="DJ WebDev" />
-    <meta
-      property="twitter:description"
-      content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder."
-    />
-    <meta
-      property="twitter:image"
-      content="http://djwebdev.net/assets/imgs/3levelsInverse.png"
-    />
-  </head>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://djwebdev.net/" />
+  <meta property="og:title" content="DJ Web Dev" />
+  <meta property="og:description"
+    content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder." />
+  <meta property="og:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png" />
 
-  <body>
-    <div id="app">
-      <transition name="fade" appear>
-        <email-modal
-          v-if="showModal"
-          @eventname="updateparent"
-          @event-submit="catchSubmit"
-        ></email-modal>
-      </transition>
-      <div class="header">
-        <div class="miniLogo">
-          <h5>_DJWebDev</h5>
-        </div>
-        <div
-          class="navbar"
-          @mouseover="isHovering = true"
-          @mouseleave="isHovering = false"
-        >
-          <div v-show="!isHovering" id="menu">
-            <p>Menu</p>
-          </div>
-          <div v-show="isHovering" class="menuOptions">
-            <a href="#whoWeAre">Who We Are</a>
-            <a href="#whatWeDo">What We Do</a>
-            <a @click="showModal = true"> How to Reach Us </a>
-            <a href="#whereWeveBeen">Where We've Been</a>
-          </div>
-        </div>
-        <div class="filler"></div>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="http://djwebdev.net/" />
+  <meta property="twitter:title" content="DJ WebDev" />
+  <meta property="twitter:description"
+    content="We deliver a web experience that is Magical, Intuitive and Cohesive. We ensure your website will not only get straight to the point but will also instill a sense of wonder." />
+  <meta property="twitter:image" content="http://djwebdev.net/assets/imgs/3levelsInverse.png" />
+</head>
+
+<body>
+  <div id="app">
+    <transition name="fade" appear>
+      <email-modal v-if="showModal" @eventname="updateparent" @event-submit="catchSubmit"></email-modal>
+    </transition>
+    <div class="header">
+      <div class="miniLogo">
+        <h5>_DJWebDev</h5>
       </div>
-      <div class="container">
-        <div class="content">
-          <h1>_DJ<br />Web<br />Dev</h1>
+      <div class="navbar" @mouseover="isHovering = true" @mouseleave="isHovering = false">
+        <div v-show="!isHovering" id="menu">
+          <p>Menu</p>
         </div>
-        <div class="content">
-          <h2>Mic Drop</h2>
+        <div v-show="isHovering" class="menuOptions">
+          <a href="#whoWeAre">Who We Are</a>
+          <a href="#whatWeDo">What We Do</a>
+          <a @click="showModal = true"> How to Reach Us </a>
+          <a href="#whereWeveBeen">Where We've Been</a>
+        </div>
+      </div>
+      <div class="filler"></div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h1>_DJ<br />Web<br />Dev</h1>
+      </div>
+      <div class="content" id="micDrop">
+        <h2>Mic Drop</h2>
+        <div class="micDropBody">
           <p>
-            DJ WebDev delivers a web experience that is three things: Magical,
-            Intuitive and Cohesive. We will ensure your website will not only
-            get straight to the point, but will also instill a sense of wonder.
+            DJ WebDev delivers a web experience that is three things: <br>
+            Magical, Intuitive and Cohesive.
+            We will ensure your website will not only get straight to the point, but will also instill a sense of wonder.
           </p>
         </div>
-        <div class="content" id="whoWeAre">
-          <div class="djWebDevIs">
-            <h2>DJ WebDev is</h2>
+      </div>
+      <div class="content" id="whoWeAre">
+        <h2>Who We Are</h2>
+        <div class="bios">
+          <div class="bioD">
+            <h3>D</h3>
+            <h4>Dave Ross</h4>
+            <h5>Co-Founder</h5>
+            <p>Talented. Inventive. Affable.</p>
           </div>
-          <div class="bios">
-            <div class="bioD">
-              <h3>D</h3>
-              <h4>Dave Ross</h4>
-              <h5>Co-Founder</h5>
-              <p>Talented. Inventive. Affable.</p>
-            </div>
-            <div class="bioJ">
-              <h3>J</h3>
-              <h4>Jordan Gilmore</h4>
-              <h5>Co-Founder</h5>
-              <p>Technical. Punctual. Also Affable.</p>
-            </div>
+          <div class="bioJ">
+            <h3>J</h3>
+            <h4>Jordan Gilmore</h4>
+            <h5>Co-Founder</h5>
+            <p>Technical. Punctual. Also Affable.</p>
           </div>
         </div>
-        <div class="content" id="whatWeDo">
-          <h2>What We Do</h2>
-        </div>
-        <div class="content">
-          <h4><em>Collab. Consider. Create.</em></h4>
-          <p>
-            Collab with us on what you want your website to be. We'll help you
-            consider the way to go. Then we create your site you've envisioned.
-          </p>
-        </div>
-        <div class="content">
-          <h4>Websites That Reflect <em>Your</em> Style</h4>
-          <p>
-            You're proud of your business, why not be proud of your website too?
-            Wanna get away from uninspired websites? Have DJWebDev build you a
-            site that reflects your style.
-          </p>
-        </div>
-        <div class="content">
-          <h4>Let's Build <em>Together</em></h4>
-          <p>
-            We want to be a partner, not just a vendor. When we work together,
-            we'll get to bottom of what a Magical, Intuitive, and Cohesive
-            Website looks like for you.
-          </p>
+      </div>
+      <div class="content" id="whatWeDo">
+        <h2>What We Do</h2>
+        <div class="dos">
+          <div>
+            <h4><em>Collab.</em></h4>
+            <p>
+              We'll work together<br> to bring your ideas to <br>life. 
+
+              <!-- Collab with us on what you want your website to be. We'll help you
+              consider the way to go. Then we create your site you've envisioned. -->
+            </p>
+          </div>
+          <div>
+            <h4><em>Consider.</em></h4>
+            <p>
+              We want you to be proud <br>of your website because <br>it reflects who you are. 
+
+              <!-- You're proud of your business, why not be proud of your website too?
+              Wanna get away from uninspired websites? Have DJWebDev build you a
+              site that reflects your style. -->
+          </div>
+          <div>
+            <h4><em>Create.</em></h4>
+            <p>
+              Together, let's build <br>a website that is <br>Magical. Intutitve. Cohesive.
+
+              <!-- We want to be a partner, not just a vendor. When we work together,
+              we'll get to bottom of what a Magical, Intuitive, and Cohesive
+              Website looks like for you. -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="./DJWebDevV3/js/main.js"></script>
-  </body>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="./DJWebDevV3/js/main.js"></script>
+</body>
+
 </html>

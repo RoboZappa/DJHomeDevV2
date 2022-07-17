@@ -43,10 +43,10 @@ body {
 }
 
 .navbar{
+  display: grid;
   grid-column: 2 / 3;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
+  align-self: center;
+  justify-self: center;
 }
 
 .menuOptions>a, .social>a, .formButtons>button{
@@ -98,32 +98,64 @@ a:visited{
     scroll-snap-align: start;
 }
 
-#whoWeAre {
-  grid-template-columns: repeat(2, auto);
+#whoWeAre{
+  display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
 }
 
-.djWebDevIs {
-  display: grid;
+#whoWeAre>h2{
   grid-column: 1 / -1;
   grid-row: 1 / 2;
+}
+
+#micDrop>div{
+  max-width: 100%;
 }
 
 .bios{
   display: grid;
   grid-column: 1 / -1;
   grid-row: 2 / -1;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-rows: 1fr;
+}
+
+#whatWeDo{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+
+#whatWeDo>h2{
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.dos{
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-rows: 1fr;
+}
+
+.dos>div, .bios>div, .micDropBody{
+  padding: 20px;
+}
+
+.dos>div>p{
+  padding-top: 13px;
 }
 
 h1, h2, h3 {
   font-family: "Bungee Shade", cursive;
-  letter-spacing: -0.1rem;
+  letter-spacing: 0.4rem;
+  line-height: 1.2;
 }
 
 h1{
   font-size: 10rem;
-  line-height: 1.2;
 }
 
 h2{
@@ -135,7 +167,7 @@ h3{
 }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 h5{
@@ -265,6 +297,39 @@ button{
   margin: 0px 40px 40px 40px;
 }
 
-.modalLogo>h3{
-  line-height: 1.2;
+@media only screen and (max-width: 1300px) {
+  .miniLogo{
+    align-self: start;
+  }
+  .navbar{
+    grid-column: 3 / -1;
+    grid-row: 1 / 2;
+    margin: 0;
+    padding-right: 20px;
+    justify-self: end;
+  }
+
+  .menuOptions{
+    display: grid;
+    justify-content: end;
+    align-content: end;
+    grid-row: 3 / -1;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .modal-background{
+    background-color: rgba(0, 0, 0);
+  }
+  .modal {
+    grid-column: 1 / -1;
+    border: none;
+  }
+  .modalLogo{
+    display: none;
+  }
+  .contactForm{
+    grid-column: 1 / -1;
+  }
 }
