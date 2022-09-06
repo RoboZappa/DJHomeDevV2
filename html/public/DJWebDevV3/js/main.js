@@ -30,17 +30,14 @@ Vue.component("email-modal", {
   </div>`,
   methods: {
     closeModal() {
-      console.log("closeDialog");
       this.$emit("eventname", false);
     },
     submitModal() {
-      console.log("submitModal");
       const data = {
-        email: document.getElementById('email').value,
-        name: document.getElementById('name').value,
-        message: document.getElementById('message').value,
+        email: document.getElementById("email").value,
+        name: document.getElementById("name").value,
+        message: document.getElementById("message").value,
       };
-      console.log("submitModal", data);
       this.$emit("event-submit", data);
     },
   },
@@ -57,19 +54,15 @@ var app = new Vue({
   methods: {
     sendEmail(data) {
       const url = window.location.origin + "/email";
-      console.log("url", url);
-      axios.post(url, data);
+      axios.post(url, data).then((res) => {
+      });
+      this.showModal = false;
     },
     catchSubmit(emailData) {
-      console.log("catchSubmit");
       this.sendEmail(emailData);
     },
     updateparent(variable) {
-      console.log("updateParent: ", variable);
       this.showModal = variable;
-    },
-    // showModal() {
-    //   this.modal = this.modal ? false : true;
-    // },
+    }
   },
 });
