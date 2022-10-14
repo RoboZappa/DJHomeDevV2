@@ -42,15 +42,18 @@
       <div class="miniLogo">
         <h5>_DJWebDev</h5>
       </div>
-      <div class="navbar" @mouseover="isHovering = true" @mouseleave="isHovering = false">
-        <div v-show="!isHovering" id="menu">
-          <p>Menu</p>
+      <div class="navbar" @mouseover="showMenu = true" @mouseleave="showMenu = false" @touchstart="wasTouched = true, showMenu = true">
+        <div class="menu">
+          <p v-show="!showMenu">Menu</p>
         </div>
-        <div v-show="isHovering" class="menuOptions">
+        <div v-show="showMenu" class="menuOptions">
           <a href="#whoWeAre">Who We Are</a>
           <a href="#whatWeDo">What We Do</a>
           <a @click="showModal = true"> How to Reach Us </a>
           <a href="#whereWeveBeen">Where We've Been</a>
+        </div>
+        <div class="menu-close">
+          <p v-show="wasTouched" @touchend="wasTouched = false, showMenu = false">X</p>
         </div>
       </div>
       <div class="filler"></div>
