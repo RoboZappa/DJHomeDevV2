@@ -219,7 +219,7 @@ p {
 }
 
 .menu-close>p {
-  text-align: right;
+  text-align: center;
   padding-right: 10px;
 }
 
@@ -360,6 +360,10 @@ button {
     grid-row: 3 / -1;
     text-align: right;
   }
+  .menu-close>p {
+    text-align: right;
+    padding-right: 10px;
+  }
 }
 
 @media only screen and (max-width: 1099px) {
@@ -446,7 +450,7 @@ button {
     text-align: center;
   }
 
-  .menu-close{
+  .menu-close>p{
     text-align: center;
   }
 }
