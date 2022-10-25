@@ -126,6 +126,11 @@
           </div>
         </div>
       </div>
+      <div id="statusMessage" v-show="formSent != null" :class="{success: formSent, failure: !formSent}">
+        <p v-if="formSent">Success! Thank you for contacting DJ WebDev. We'll respond as quickly as possible.</p>
+        <p v-if="!formSent">Ope! Looks like something didn't go quite right. Please try again.</p>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

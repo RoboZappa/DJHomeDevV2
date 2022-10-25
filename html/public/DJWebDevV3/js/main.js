@@ -49,7 +49,8 @@ var app = new Vue({
     return {
       showMenu: false,
       showModal: false,
-      wasTouched: false
+      wasTouched: false,
+      formSent: null,
     };
   },
   methods: {
@@ -57,13 +58,16 @@ var app = new Vue({
       const url = window.location.origin + "/email";
       axios.post(url, data).then((res) => {
       });
-      this.showModal = false;
     },
     catchSubmit(emailData) {
       this.sendEmail(emailData);
     },
     updateparent(variable) {
       this.showModal = variable;
+    },
+    closeOut(element){
+      var e = document.getElementById(element);
+      e.style.display = "none";
     }
   },
 });

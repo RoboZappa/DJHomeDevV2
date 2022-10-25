@@ -182,6 +182,29 @@ a:visited {
   padding-top: 13px;
 }
 
+#statusMessage{
+  position: fixed;
+  top: 0;
+  left: 33.5%;
+  margin-top: 20px; 
+  padding: 5px;
+  width: 35%;
+  height: auto;
+  text-align: center;
+}
+
+#statusMessage>p{
+  font-size: 1.3rem;
+}
+
+.success{
+  background-color: rgb(14, 172, 93);
+}
+
+.failure{
+  background-color: rgb(241, 93, 88);
+}
+
 h1,
 h2,
 h3 {
