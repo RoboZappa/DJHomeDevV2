@@ -182,6 +182,20 @@ a:visited {
   padding-top: 13px;
 }
 
+#wherewevebeen {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+
+.work {
+  display: grid;
+  grid-column: 2 / 2;
+  grid-row: 2 / 3;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-rows: 1fr;
+}
+
 #statusMessage{
   position: fixed;
   top: 0;
