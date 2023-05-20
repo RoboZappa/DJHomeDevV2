@@ -2,7 +2,7 @@ Vue.component("email-modal", {
   template: `<div class="modal-background">
     <div class="modal">
       <div class="social">
-        <a href="http://www.facebook.com/officialdjwebdev"target="_blank">Facebook</a>
+        <a href="https://www.facebook.com/officialdjwebdev"target="_blank">Facebook</a>
         <a href="https://www.instagram.com/officialdjwebdev" target="_blank">Instagram</a>
       </div>
       <div class="contactForm">
